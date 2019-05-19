@@ -7,6 +7,8 @@ const filesToCache = [
  "./images/icons/1.png",
  "./images/icons/2.png",
  "./images/icons/3.png",
+ "./images/arrow-next.svg",
+ "./images/icons/top-ad.png",
  "./images/ad-img.png",
  "./images/Apparel-1.svg",
  "./images/Automotive-1.svg",

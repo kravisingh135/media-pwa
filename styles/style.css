@@ -106,6 +106,7 @@ header{
 }
 .top-nav .menu-items{  
   opacity: 0;
+  visibility: hidden;
   width: 100%;
   position: absolute;
   right: 0px;
@@ -115,6 +116,7 @@ header{
 }
 .top-nav .menu-items.open{
   opacity: 1;
+  visibility: visible;
   padding-right: 100px;
 }
 .top-nav .menu-items .list,
@@ -444,7 +446,47 @@ header{
   display: inline-block;  
 }
 .brands-catg{
-  padding-top: 85px;
+  padding: 85px 0 20px 0;
+}
+.right-area ul img{
+  max-width: 100%;
+}
+.ad-list{
+  position: relative;
+  background-image: linear-gradient(-225deg, #0BB5E8 0%, #057FCD 100%);
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 15px 15px 10px 15px;
+  text-align: left;
+  margin-top: -3px;
+}
+.ad-list h4{
+  opacity: 0.4;
+  font-weight: 600;
+  font-size: 10px;
+  color: #FFFFFF;
+}
+.ad-list ul{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.ad-list ul li{
+  display: block;
+  margin-bottom: 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+.ad-list ul li:first-child{
+  border-top: 0;
+}
+.ad-list ul li a{
+  text-decoration: none;
+  font-size: 14px;
+  color: #FFFFFF;
+  font-weight: 600;
+  background: url("../images/arrow-next.svg") no-repeat right center;
+  padding: 14px 0; 
 }
 
 @media screen and (max-width: 1280px){
@@ -484,13 +526,115 @@ header{
   .menu-items .list ul ul li{
     margin-right: 58px;
   }
+  .banner .adv-search input[type=text]{
+    width: 50%;
+  }
   .left-area {
     width: 64%;
   }
   .right-area {
     width: 34%;
+  }    
+}
+@media screen and (max-width: 640px){
+  .banner .adv-search {
+      margin: 30px 0;
   }
-  .right-area ul a img{
-    max-width: 100%;
+  .banner .adv-search input[type=text]{
+    width: 40%;
+  }
+  .banner .adv-search select {
+    width: 25%;
+  }
+  .banner h1 {
+    font-size: 34px;
+  }
+  .left-area {
+    width: 100%;
+  }
+  .right-area {
+    width: 100%;
+    float: none;
+    margin: 0 auto;
+    padding-top: 40px;
+    clear: left; 
+  } 
+  .top-nav .menu-items{
+    right: 0px;    
+    background: #FFFFFF;
+    padding-right: 20px;
+  }
+  .top-nav .menu-items.open{
+    padding-right: 20px;
+    top: 40px;
+  }
+  .menu-items .list ul ul {
+    top: 42px;
+  }
+  .menu-items .list ul ul li {
+    margin-left: 15px;
+    margin-right: 15px;
+    min-width: 76px;
+  }
+  .l-more span{
+    margin-top: 10px;
+  }
+}
+@media screen and (max-width: 470px){
+  .top-logo{
+    max-width: 146px;
+    top: 8px;
+  }
+  .top-nav .menu-items .flash-offer{
+    max-width: 55px;
+    margin-left: 0;
+  }
+  .top-logo img,
+  .top-nav .menu-items .flash-offer img{
+    width: 100%;
+  }
+  .top-nav .menu-icon{
+    margin-top: 8px;
+  }
+  .menu-items .list ul li{
+    font-size: 13px;
+    margin-right: 12px;
+  }
+  .menu-items .list ul ul {
+    top: 33px;
+  }
+  .menu-items .list ul li.sub-menu:hover a {
+    padding-bottom: 29px;
+  }
+  .top-nav .menu-items.open{
+    padding-bottom: 5px;
+  }
+  .menu-items .list ul ul li {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .banner {
+    height: 350px;
+  }
+  .banner h1 {
+    font-size: 30px;
+    margin-bottom: 28px;
+  }
+  .banner .adv-search{
+    padding: 6px 5px;
+  }
+  .banner .adv-search input[type=text] {
+    width: 33%;
+  }
+  .banner .adv-search input[type=button] {
+    width: 110px;
+    font-size: 14px;
+  }
+  .banner .adv-search select {
+    width: 21%;
+    padding: 0 5px;
+  }
+  .left-area ul li{
+    width: 100%;
   }
 }
