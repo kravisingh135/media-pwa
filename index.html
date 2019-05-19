@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media-PWA</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Muli:400,600,700,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="styles/style.css">
+    <script type="text/javascript" src="scripts/jquery-3.3.1.js"></script>
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#2F3BA2">
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <div class="container">
+          <div class="top-logo">
+              <a href="#"><img src="images/icons/logo.png" alt="logo"></a>
+          </div>
+          <nav class="top-nav">
+            <span class="menu-icon">MENU</span>
+            <div class="menu-items clearfix">
+              <div class="list">
+                <ul>
+                  <li><a href="#">Deals</a></li>
+                  <li class="sub-menu">
+                    <a href="#">Coupons</a>
+                    <ul>
+                      <li>
+                        <a href="#"><span class="ms-icon"><img src="images/Apparel-1.svg" alt="Apparel"></span>Apparel</a>
+                      </li>
+                      <li>
+                        <a href="#"><span class="ms-icon"><img src="images/Automotive-1.svg" alt="Automotive"></span>Automotive</a>
+                      </li>
+                      <li>
+                        <a href="#"><span class="ms-icon"><img src="images/Computers-1.svg" alt="Computers"></span>Computers</a>
+                      </li>
+                      <li>
+                        <a href="#"><span class="ms-icon"><img src="images/Credit Cards-1.svg" alt="Credit Cards"></span>Credit Cards</a>
+                      </li>
+
+                      <li>
+                        <a href="#"><span class="ms-icon"><img src="images/Electroincs-1.svg" alt="Electroincs"></span>Electroincs</a>
+                      </li>
+                      <li>
+                        <a href="#"><span class="ms-icon"><img src="images/Games-1.svg" alt="Games"></span>Games</a>
+                      </li>
+                      <li>
+                        <a href="#"><span class="ms-icon"><img src="images/Grocery-1.svg" alt="Grocery"></span>Grocery</a>
+                      </li>
+                      <li>
+                        <a href="#"><span class="ms-icon"><img src="images/Travel-1.svg" alt="Travel"></span>Travel</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li><a href="#">Tips</a></li>
+                  <li><a href="#">Contests</a></li>
+                </ul>
+              </div>
+              <div class="search">
+                <input type="text" placeholder="Search for discounts, coupons, events">
+                <input type="button" value="Search">
+              </div>
+              <div class="flash-offer">
+                <a href="#"><img src="images/flash-offer.png" alt="flash-offer"></a>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </header>
+      <div class="banner">
+        <div class="container">
+          <div class="bnr-txt">
+            <h1>Cashback Offers + Discount Offers</h1>
+            <div class="adv-search">
+              <select>
+                <option>All</option>
+              </select>
+              <input type="text" placeholder="Search offers and discount coupons">
+              <input type="button" value="Find Coupons">
+            </div>
+            <p>Explore more to start earning offers and discounts</p>
+            <span class="mouse-down"><img src="images/ico-mouse-down.svg"></span>
+          </div>
+        </div>
+      </div>
+      <div id="products-wrap">
+        <div class="container"> 
+          <div class="left-area">
+            <div class="coupons-catg">
+              <h2>Popular Coupon Categories <span></span></h2>
+              <ul>
+                <li class="hidden">
+                  <a href="#"><span class="ms-icon"><img src="images/diaper.png" alt="Diaper"></span>Diaper</a>
+                </li>
+                <li class="hidden">
+                  <a href="#"><span class="ms-icon"><img src="images/milk.png" alt="Milk"></span>Milk</a>
+                </li>
+                <li class="hidden">
+                  <a href="#"><span class="ms-icon"><img src="images/coffee.png" alt="Coffee"></span>Coffee</a>
+                </li>
+                <li class="hidden">
+                  <a href="#"><span class="ms-icon"><img src="images/shampoo.png" alt="Shampoo"></span>Shampoo</a>
+                </li>
+
+                <li class="hidden">
+                  <a href="#"><span class="ms-icon"><img src="images/cheese.png" alt="Cheese"></span>Cheese</a>
+                </li>
+                <li class="hidden">
+                  <a href="#"><span class="ms-icon"><img src="images/bread.png" alt="Bread"></span>Bread</a>
+                </li>
+                <li class="hidden">
+                  <a href="#"><span class="ms-icon"><img src="images/dog.png" alt="Dog"></span>Dog</a>
+                </li>
+                <li class="hidden">
+                  <a href="#"><span class="ms-icon"><img src="images/yogurt.png" alt="Yogurt"></span>Yogurt</a>
+                </li>
+
+                <li class="hidden">
+                    <a href="#"><span class="ms-icon"><img src="images/diaper.png" alt="Diaper"></span>Diaper</a>
+                  </li>
+                  <li class="hidden">
+                    <a href="#"><span class="ms-icon"><img src="images/milk.png" alt="Milk"></span>Milk</a>
+                  </li>
+                  <li class="hidden">
+                    <a href="#"><span class="ms-icon"><img src="images/coffee.png" alt="Coffee"></span>Coffee</a>
+                  </li>
+                  <li class="hidden">
+                    <a href="#"><span class="ms-icon"><img src="images/shampoo.png" alt="Shampoo"></span>Shampoo</a>
+                  </li>
+  
+                  <li class="hidden">
+                    <a href="#"><span class="ms-icon"><img src="images/cheese.png" alt="Cheese"></span>Cheese</a>
+                  </li>
+                  <li class="hidden">
+                    <a href="#"><span class="ms-icon"><img src="images/bread.png" alt="Bread"></span>Bread</a>
+                  </li>
+                  <li class="hidden">
+                    <a href="#"><span class="ms-icon"><img src="images/dog.png" alt="Dog"></span>Dog</a>
+                  </li>
+                  <li class="hidden">
+                    <a href="#"><span class="ms-icon"><img src="images/yogurt.png" alt="Yogurt"></span>Yogurt</a>
+                  </li>
+                  <li class="hidden">
+                    <a href="#"><span class="ms-icon"><img src="images/diaper.png" alt="Diaper"></span>Diaper</a>
+                  </li>
+                  <li class="hidden">
+                    <a href="#"><span class="ms-icon"><img src="images/milk.png" alt="Milk"></span>Milk</a>
+                  </li>
+                  <li class="hidden">
+                    <a href="#"><span class="ms-icon"><img src="images/coffee.png" alt="Coffee"></span>Coffee</a>
+                  </li>
+                  <li class="hidden">
+                    <a href="#"><span class="ms-icon"><img src="images/shampoo.png" alt="Shampoo"></span>Shampoo</a>
+                  </li>
+  
+                  <li class="hidden">
+                    <a href="#"><span class="ms-icon"><img src="images/cheese.png" alt="Cheese"></span>Cheese</a>
+                  </li>
+                  <li class="hidden">
+                    <a href="#"><span class="ms-icon"><img src="images/bread.png" alt="Bread"></span>Bread</a>
+                  </li>
+                  <li class="hidden">
+                    <a href="#"><span class="ms-icon"><img src="images/dog.png" alt="Dog"></span>Dog</a>
+                  </li>
+                  <li class="hidden">
+                    <a href="#"><span class="ms-icon"><img src="images/yogurt.png" alt="Yogurt"></span>Yogurt</a>
+                  </li>
+              </ul>
+              <div class="l-more">
+                <span id="load-more"> Load More</span>
+              </div>
+            </div>
+
+            <div class="brands-catg">
+                <h2>Brands <span></span></h2>
+                <ul>
+                  <li class="hidden">
+                    <a href="#"><span class="ms-icon"><img src="images/diaper.png" alt="Diaper"></span>Diaper</a>
+                  </li>
+                  <li class="hidden">
+                    <a href="#"><span class="ms-icon"><img src="images/milk.png" alt="Milk"></span>Milk</a>
+                  </li>
+                  <li class="hidden">
+                    <a href="#"><span class="ms-icon"><img src="images/coffee.png" alt="Coffee"></span>Coffee</a>
+                  </li>
+                  <li class="hidden">
+                    <a href="#"><span class="ms-icon"><img src="images/shampoo.png" alt="Shampoo"></span>Shampoo</a>
+                  </li>
+  
+                  <li class="hidden">
+                    <a href="#"><span class="ms-icon"><img src="images/cheese.png" alt="Cheese"></span>Cheese</a>
+                  </li>
+                  <li class="hidden">
+                    <a href="#"><span class="ms-icon"><img src="images/bread.png" alt="Bread"></span>Bread</a>
+                  </li>
+                  <li class="hidden">
+                    <a href="#"><span class="ms-icon"><img src="images/dog.png" alt="Dog"></span>Dog</a>
+                  </li>
+                  <li class="hidden">
+                    <a href="#"><span class="ms-icon"><img src="images/yogurt.png" alt="Yogurt"></span>Yogurt</a>
+                  </li>
+  
+                  <li class="hidden">
+                      <a href="#"><span class="ms-icon"><img src="images/diaper.png" alt="Diaper"></span>Diaper</a>
+                    </li>
+                    <li class="hidden">
+                      <a href="#"><span class="ms-icon"><img src="images/milk.png" alt="Milk"></span>Milk</a>
+                    </li>
+                    <li class="hidden">
+                      <a href="#"><span class="ms-icon"><img src="images/coffee.png" alt="Coffee"></span>Coffee</a>
+                    </li>
+                    <li class="hidden">
+                      <a href="#"><span class="ms-icon"><img src="images/shampoo.png" alt="Shampoo"></span>Shampoo</a>
+                    </li>
+    
+                    <li class="hidden">
+                      <a href="#"><span class="ms-icon"><img src="images/cheese.png" alt="Cheese"></span>Cheese</a>
+                    </li>
+                    <li class="hidden">
+                      <a href="#"><span class="ms-icon"><img src="images/bread.png" alt="Bread"></span>Bread</a>
+                    </li>
+                    <li class="hidden">
+                      <a href="#"><span class="ms-icon"><img src="images/dog.png" alt="Dog"></span>Dog</a>
+                    </li>
+                    <li class="hidden">
+                      <a href="#"><span class="ms-icon"><img src="images/yogurt.png" alt="Yogurt"></span>Yogurt</a>
+                    </li>
+                    <li class="hidden">
+                      <a href="#"><span class="ms-icon"><img src="images/diaper.png" alt="Diaper"></span>Diaper</a>
+                    </li>
+                    <li class="hidden">
+                      <a href="#"><span class="ms-icon"><img src="images/milk.png" alt="Milk"></span>Milk</a>
+                    </li>
+                    <li class="hidden">
+                      <a href="#"><span class="ms-icon"><img src="images/coffee.png" alt="Coffee"></span>Coffee</a>
+                    </li>
+                    <li class="hidden">
+                      <a href="#"><span class="ms-icon"><img src="images/shampoo.png" alt="Shampoo"></span>Shampoo</a>
+                    </li>
+    
+                    <li class="hidden">
+                      <a href="#"><span class="ms-icon"><img src="images/cheese.png" alt="Cheese"></span>Cheese</a>
+                    </li>
+                    <li class="hidden">
+                      <a href="#"><span class="ms-icon"><img src="images/bread.png" alt="Bread"></span>Bread</a>
+                    </li>
+                    <li class="hidden">
+                      <a href="#"><span class="ms-icon"><img src="images/dog.png" alt="Dog"></span>Dog</a>
+                    </li>
+                    <li class="hidden">
+                      <a href="#"><span class="ms-icon"><img src="images/yogurt.png" alt="Yogurt"></span>Yogurt</a>
+                    </li>
+                </ul>
+                <div class="l-more">
+                  <span id="load-more2"> Load More</span>
+                </div>
+              </div>
+          </div>
+          <div class="right-area">
+            <ul>              
+              <li class="mgrid"><a href="#">
+                <img src="images/icons/1.png" alt="Ad">
+                <img src="images/icons/2.png" alt="Ad">
+                <img src="images/icons/3.png" alt="Ad">
+              </a></li>
+              <li><a href="#"><img src="images/icons/ad-img.png" alt="Ad"></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>      
+    </div>    
+
+    <script type="text/javascript" src="scripts/app.js"></script>
+  </body>
+</html>

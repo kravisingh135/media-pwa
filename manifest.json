@@ -1,0 +1,29 @@
+{
+  "name": "media PWA",
+  "short_name": "media PWA",
+  "icons": [{
+    "src": "images/icons/1.png",
+      "sizes": "140x250",
+      "type": "image/png"
+    }, {
+      "src": "images/icons/2.png",
+      "sizes": "100x250",
+      "type": "image/png"
+    }, {
+      "src": "images/icons/3.png",
+      "sizes": "100x250",
+      "type": "image/png"
+    }, {
+      "src": "images/icons/ad-img.png",
+      "sizes": "300x250",
+      "type": "image/png"
+    }, {
+      "src": "images/icons/logo.png",
+      "sizes": "200x51",
+      "type": "image/png"
+    }],
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#333"
+}
