@@ -1,6 +1,6 @@
 {
   "name": "media-pwa-v2",
-  "short_name": "media PWA",
+  "short_name": "media-pwa-v2",
   "icons": [{
     "src": "images/icons/1.png",
       "sizes": "140x250",
@@ -22,7 +22,7 @@
       "sizes": "200x51",
       "type": "image/png"
     }],
-  "start_url": "/index.html",
+  "start_url": "./index.html",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#333"
