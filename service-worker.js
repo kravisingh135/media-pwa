@@ -35,11 +35,9 @@ const filesToCache = [
  "./images/yogurt.png",
  "./index.html",
  "./manifest.json",
- "./scripts",
  "./scripts/app.js",
  "./scripts/jquery-3.3.1.js",
  "./service-worker.js",
- "./styles",
  "./styles/style.css"
 ];
 
