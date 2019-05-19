@@ -1,11 +1,15 @@
-var dataCacheName = 'media-pwa';
-var cacheName = 'media-pwa';
-var filesToCache = [
-  '/',
+const PRECACHE = 'media-pwa-v1';
+const RUNTIME = 'media-pwa';
+const PRECACHE_URLS = [
+"index.html",
+ "./",
  "./images",
  "./images/1.png",
  "./images/2.png",
  "./images/3.png",
+ "./images/icons/1.png",
+ "./images/icons/2.png",
+ "./images/icons/3.png",
  "./images/ad-img.png",
  "./images/Apparel-1.svg",
  "./images/Automotive-1.svg",
@@ -27,6 +31,7 @@ var filesToCache = [
  "./images/ico-mouse-down.svg",
  "./images/ico-search.svg",
  "./images/logo.png",
+ "./images/icons/logo.png",
  "./images/milk.png",
  "./images/shampoo.png",
  "./images/Travel-1.svg",
@@ -41,36 +46,50 @@ var filesToCache = [
  "./styles/style.css"
 ];
 
-self.addEventListener('install', function(e) {
-  console.log('[ServiceWorker] Install');
-  e.waitUntil(
-    caches.open(cacheName).then(function(cache) {
-      console.log('[ServiceWorker] Caching app shell');
-      return cache.addAll(filesToCache);
-    })
+// The install handler takes care of precaching the resources we always need.
+self.addEventListener('install', event => {
+  event.waitUntil(
+    caches.open(PRECACHE)
+      .then(cache => cache.addAll(PRECACHE_URLS))
+      .then(self.skipWaiting())
   );
 });
 
-self.addEventListener('activate', function(e) {
-  console.log('[ServiceWorker] Activate');
-  e.waitUntil(
-    caches.keys().then(function(keyList) {
-      return Promise.all(keyList.map(function(key) {
-        if (key !== cacheName && key !== dataCacheName) {
-          console.log('[ServiceWorker] Removing old cache', key);
-          return caches.delete(key);
-        }
+// The activate handler takes care of cleaning up old caches.
+self.addEventListener('activate', event => {
+  const currentCaches = [PRECACHE, RUNTIME];
+  event.waitUntil(
+    caches.keys().then(cacheNames => {
+      return cacheNames.filter(cacheName => !currentCaches.includes(cacheName));
+    }).then(cachesToDelete => {
+      return Promise.all(cachesToDelete.map(cacheToDelete => {
+        return caches.delete(cacheToDelete);
       }));
-    })
+    }).then(() => self.clients.claim())
   );
-  return self.clients.claim();
 });
 
-self.addEventListener('fetch', function(e) {
-  console.log('[Service Worker] Fetch', e.request.url);
-  e.respondWith(
-    caches.match(e.request).then(function(response) {
-      return response || fetch(e.request);
-    })
-  );
+// The fetch handler serves responses for same-origin resources from a cache.
+// If no response is found, it populates the runtime cache with the response
+// from the network before returning it to the page.
+self.addEventListener('fetch', event => {
+  // Skip cross-origin requests, like those for Google Analytics.
+  if (event.request.url.startsWith(self.location.origin)) {
+    event.respondWith(
+      caches.match(event.request).then(cachedResponse => {
+        if (cachedResponse) {
+          return cachedResponse;
+        }
+
+        return caches.open(RUNTIME).then(cache => {
+          return fetch(event.request).then(response => {
+            // Put a copy of the response in the runtime cache.
+            return cache.put(event.request, response.clone()).then(() => {
+              return response;
+            });
+          });
+        });
+      })
+    );
+  }
 });
